@@ -1,0 +1,105 @@
+# Ignore Visual Studio temporary files, build results, and
+# folder-based project outputs
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Ll]og.[Tt]xt
+[Ll]og.[Tt]xt.[0-9]*
+[Tt]emp/
+[Tt]mp/
+[Tt]emp[Tt]mp/
+
+# Roslyn intermediate folder
+[Rr]oslyn/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of the presence of the .nuget packages.config file.
+**/packages/*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file for Discord
+.discord-desktop-core/
+
+# Folder config file for Slack
+.slack-core-config/
+
+# Office 2013/2016 temporary and lock files
+~$*
+~*.tmp
+
+# Recycle Bin used on file shares
+$.Trashes
+
+# Network trash folder used on macOS
+.DS_Store
+
+# Windows shortcuts
+*.lnk
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file for Discord
+.discord-desktop-core/
+
+# Folder config file for Slack
+.slack-core-config/
+
+# Microsoft Azure Web App publish settings
+# Potentially sensitive data included
+*.PublishSettings
+
+# Local History for Visual Studio
+.vs/
+
+# Windows user-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# JetBrains Rider
+.idea/
+
+# Rider & ReSharper logs
+*.DotSettings.user
+resharper/
+
+# Rider files
+.idea/
+
+# Rider Plug-ins
+/.idea/**
+/.idea_modules/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

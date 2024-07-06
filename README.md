@@ -16,25 +16,6 @@ The Inventory Management System is a robust application designed to manage produ
 - Entity Framework Core
 - WinForms
 
-## Project Structure
-InventoryManagement
-│ InventoryManagement.sln
-│
-└───InventoryManagement.Domain
-│ │ IProductRepository.cs
-│ │ Product.cs
-│
-└───InventoryManagement.Infrastructure
-│ │ ApplicationDbContext.cs
-│ │ ProductRepository.cs
-│
-└───InventoryManagement.WinForms
-│ MainForm.cs
-│ AddProductForm.cs
-│ UpdateProductForm.cs
-│ Program.cs
-
-
 ## Getting Started
 
 ### Prerequisites
