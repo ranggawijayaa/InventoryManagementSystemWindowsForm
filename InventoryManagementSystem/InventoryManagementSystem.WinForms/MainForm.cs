@@ -36,9 +36,12 @@ namespace InventoryManagementSystem.WinForms
             {
                 var selectedRow = dataGridView1.SelectedRows[0];
                 var selectedProduct = (Product)selectedRow.DataBoundItem;
-
-                await _productRepository.DeleteProductAsync(selectedProduct.Id);
-                await LoadProductsAsync();
+                var result = MessageBox.Show("Are you sure want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes) 
+                {
+                    await _productRepository.DeleteProductAsync(selectedProduct.Id);
+                    await LoadProductsAsync();
+                }
             }
             else
             {
