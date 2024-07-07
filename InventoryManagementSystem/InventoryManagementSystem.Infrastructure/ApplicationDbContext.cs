@@ -7,9 +7,8 @@ namespace InventoryManagementSystem.Infrastructure
     {
         public DbSet<Product> Products { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=inventory.db");
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {            
         }
     }
 }
