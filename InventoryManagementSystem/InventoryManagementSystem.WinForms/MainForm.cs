@@ -19,8 +19,8 @@ namespace InventoryManagementSystem.WinForms
 
         private async Task LoadProductsAsync()
         {
-            var products = await _productRepository.GetAllProductAsync();
-            dataGridView1.DataSource = products;
+             var products = await _productRepository.GetAllProductAsync();
+            dataGridView1.DataSource = products.ToList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

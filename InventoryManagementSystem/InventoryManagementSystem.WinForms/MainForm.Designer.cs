@@ -84,8 +84,10 @@
             Controls.Add(btnAdd);
             Name = "MainForm";
             Text = "Inventory Management System";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            
         }
 
         #endregion
