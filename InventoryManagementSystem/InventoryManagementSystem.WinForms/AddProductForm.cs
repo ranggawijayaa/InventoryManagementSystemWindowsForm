@@ -1,4 +1,5 @@
-﻿using InventoryManagementSystem.Domain;
+﻿using InventoryManagementSystem.Domain.Entities;
+using InventoryManagementSystem.Domain.Interface;
 
 namespace InventoryManagementSystem.WinForms
 {

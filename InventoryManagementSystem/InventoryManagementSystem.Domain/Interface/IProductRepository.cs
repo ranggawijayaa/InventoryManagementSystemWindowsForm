@@ -1,4 +1,6 @@
-﻿namespace InventoryManagementSystem.Domain
+﻿using InventoryManagementSystem.Domain.Entities;
+
+namespace InventoryManagementSystem.Domain.Interface
 {
     public interface IProductRepository
     {

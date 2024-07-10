@@ -1,4 +1,4 @@
-﻿using InventoryManagementSystem.Domain;
+﻿using InventoryManagementSystem.Domain.Entities;
 using InventoryManagementSystem.Infrastructure;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;

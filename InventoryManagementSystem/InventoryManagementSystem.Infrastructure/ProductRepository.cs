@@ -1,4 +1,5 @@
-﻿using InventoryManagementSystem.Domain;
+﻿using InventoryManagementSystem.Domain.Entities;
+using InventoryManagementSystem.Domain.Interface;
 using Microsoft.EntityFrameworkCore;
 
 namespace InventoryManagementSystem.Infrastructure
@@ -24,7 +25,7 @@ namespace InventoryManagementSystem.Infrastructure
 
         public async Task AddProductAsync(Product product)
         {
-            _context.Products.Add(product);
+            _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
         }
 

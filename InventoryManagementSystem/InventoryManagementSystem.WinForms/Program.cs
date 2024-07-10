@@ -1,4 +1,4 @@
-using InventoryManagementSystem.Domain;
+using InventoryManagementSystem.Domain.Interface;
 using InventoryManagementSystem.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
