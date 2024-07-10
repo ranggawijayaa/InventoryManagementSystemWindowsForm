@@ -13,6 +13,15 @@ namespace InventoryManagementSystem.WinForms
             _product = product;
             InitializeComponent();
             PopulateFields();
+            txtQuantity.KeyPress += TxtQuantity_KeyPress;
+        }
+
+        private void TxtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void PopulateFields()

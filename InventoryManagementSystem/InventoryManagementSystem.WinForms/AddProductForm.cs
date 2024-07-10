@@ -10,6 +10,7 @@ namespace InventoryManagementSystem.WinForms
         {
             _productRepository = productRepository;
             InitializeComponent();
+            txtQuantity.KeyPress += TxtQuantity_KeyPress;
         }
 
         private async void btnAdd_Click(object sender, EventArgs e)
@@ -23,6 +24,14 @@ namespace InventoryManagementSystem.WinForms
 
             await _productRepository.AddProductAsync(product);
             this.Close();
+        }
+
+        private void TxtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

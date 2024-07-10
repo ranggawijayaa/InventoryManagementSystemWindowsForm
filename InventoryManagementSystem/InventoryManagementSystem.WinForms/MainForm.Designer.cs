@@ -37,9 +37,10 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(12, 408);
+            btnAdd.Location = new Point(14, 471);
+            btnAdd.Margin = new Padding(4, 3, 4, 3);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(75, 30);
+            btnAdd.Size = new Size(88, 35);
             btnAdd.TabIndex = 1;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(93, 408);
+            btnDelete.Location = new Point(108, 471);
+            btnDelete.Margin = new Padding(4, 3, 4, 3);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(75, 30);
+            btnDelete.Size = new Size(88, 35);
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(174, 408);
+            btnUpdate.Location = new Point(203, 471);
+            btnUpdate.Margin = new Padding(4, 3, 4, 3);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(75, 30);
+            btnUpdate.Size = new Size(88, 35);
             btnUpdate.TabIndex = 3;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -68,26 +71,28 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Location = new Point(14, 14);
+            dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(776, 390);
+            dataGridView1.Size = new Size(905, 450);
             dataGridView1.TabIndex = 0;
+            dataGridView1.EditingControlShowing += dataGridView1_EditingControlShowing;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(933, 519);
             Controls.Add(dataGridView1);
             Controls.Add(btnUpdate);
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "MainForm";
             Text = "Inventory Management System";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            
         }
 
         #endregion

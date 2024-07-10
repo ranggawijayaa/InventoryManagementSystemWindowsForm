@@ -1,4 +1,5 @@
 ﻿using InventoryManagementSystem.Domain;
+using System.Windows.Forms;
 
 namespace InventoryManagementSystem.WinForms
 {
@@ -19,7 +20,7 @@ namespace InventoryManagementSystem.WinForms
 
         private async Task LoadProductsAsync()
         {
-             var products = await _productRepository.GetAllProductAsync();
+            var products = await _productRepository.GetAllProductAsync();
             dataGridView1.DataSource = products.ToList();
         }
 
@@ -37,7 +38,7 @@ namespace InventoryManagementSystem.WinForms
                 var selectedRow = dataGridView1.SelectedRows[0];
                 var selectedProduct = (Product)selectedRow.DataBoundItem;
                 var result = MessageBox.Show("Are you sure want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (result == DialogResult.Yes) 
+                if (result == DialogResult.Yes)
                 {
                     await _productRepository.DeleteProductAsync(selectedProduct.Id);
                     await LoadProductsAsync();
@@ -63,6 +64,26 @@ namespace InventoryManagementSystem.WinForms
             else
             {
                 MessageBox.Show("Please select a product to update.");
+            }
+        }
+
+        private void dataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.ColumnIndex == dataGridView1.Columns["Quantity"].Index)
+            {
+                if (e.Control is TextBox textBox)
+                {
+                    textBox.KeyPress -= TextBox_KeyPress;
+                    textBox.KeyPress += TextBox_KeyPress;
+                }
+            }
+        }
+
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

@@ -2,6 +2,7 @@
 using InventoryManagementSystem.Infrastructure;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using Xunit;
 
 namespace InventoryManagementSystem.Tests
