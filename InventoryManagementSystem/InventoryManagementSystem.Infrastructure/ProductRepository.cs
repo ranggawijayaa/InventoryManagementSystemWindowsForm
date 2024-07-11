@@ -13,7 +13,7 @@ namespace InventoryManagementSystem.Infrastructure
             _context = context;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProductAsync()
+        public async Task<IEnumerable<Product>> GetAllProductsAsync()
         {
             return await _context.Products.ToListAsync();
         }

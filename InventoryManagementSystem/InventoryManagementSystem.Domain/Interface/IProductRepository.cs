@@ -4,7 +4,7 @@ namespace InventoryManagementSystem.Domain.Interface
 {
     public interface IProductRepository
     {
-        Task<IEnumerable<Product>> GetAllProductAsync();
+        Task<IEnumerable<Product>> GetAllProductsAsync();
         Task<Product> GetProductByIdAsync(int id);
         Task AddProductAsync(Product product);
         Task UpdateProductAsync(Product product);

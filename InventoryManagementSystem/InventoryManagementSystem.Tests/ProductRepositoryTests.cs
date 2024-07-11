@@ -40,7 +40,7 @@ namespace InventoryManagementSystem.Tests
 
             // Act
             await _productRepository.AddProductAsync(product);
-            var products = await _productRepository.GetAllProductAsync();
+            var products = await _productRepository.GetAllProductsAsync();
 
             // Assert
             Assert.Single(products);
@@ -58,7 +58,7 @@ namespace InventoryManagementSystem.Tests
                 Quantity = 10,
             };
             await _productRepository.AddProductAsync(product);
-            var savedProduct = (await _productRepository.GetAllProductAsync()).First();
+            var savedProduct = (await _productRepository.GetAllProductsAsync()).First();
 
             //Act
             var result = await _productRepository.GetProductByIdAsync(savedProduct.Id);
@@ -79,7 +79,7 @@ namespace InventoryManagementSystem.Tests
                 Quantity = 10,
             };
             await _productRepository.AddProductAsync(product);
-            var savedProduct = (await _productRepository.GetAllProductAsync()).First();
+            var savedProduct = (await _productRepository.GetAllProductsAsync()).First();
 
             //Act
             savedProduct.Name = "Updated Product";
@@ -102,7 +102,7 @@ namespace InventoryManagementSystem.Tests
                 Quantity = 10,
             };
             await _productRepository.AddProductAsync(product);
-            var savedProduct = (await _productRepository.GetAllProductAsync()).First();
+            var savedProduct = (await _productRepository.GetAllProductsAsync()).First();
 
             //Act
             await _productRepository.DeleteProductAsync(savedProduct.Id);

@@ -4,7 +4,7 @@ namespace InventoryManagementSystem.Domain.Interface
 {
     public interface ISupplierRepository
     {
-        Task<IEnumerable<Supplier>> GetAllSupplierAsync();
+        Task<IEnumerable<Supplier>> GetAllSuppliersAsync();
         Task<Supplier> GetSupplierByIdAsync(int id);
         Task AddSupplierAsync(Supplier supplier);
         Task UpdateSupplierAsync(Supplier supplier);
